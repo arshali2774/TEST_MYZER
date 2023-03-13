@@ -4,7 +4,7 @@ import { useState } from 'react';
 //importing css files for items
 import './items.css';
 
-//creating a items functional component
+//creating a items component
 const Items = ({ label, url, bg, hover, icon, hoverIcon }) => {
   //default background color
   const defaultColorBg = { background: 'transparent' };
@@ -24,8 +24,10 @@ const Items = ({ label, url, bg, hover, icon, hoverIcon }) => {
   //state to change icon color on mouse enter
   const [iconColorHover, setIconColorHover] = useState(defaultColorIcon);
 
+  //returning the jsx element
   return (
     <div className='item'>
+      {/* making the icon and backgroundColor change on hover  */}
       <div
         className='icon'
         onMouseEnter={() => setBgColorHover(bgColor)}
